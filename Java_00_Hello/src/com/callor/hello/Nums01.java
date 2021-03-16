@@ -8,7 +8,8 @@ public class Nums01 {
 		System.out.print(5);
 		System.out.print(" = ");
 		System.out.println(3+5);
+		
 
-	}
 
+}
 }
