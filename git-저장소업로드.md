@@ -58,3 +58,7 @@
 
 * git push -u origin master
 * git push
+
+## git pull
+* 현재 git hub 에 있는 소스코드와 내 소스코드를 맞춰 다운로드를 해준다
+즉 동기화와 같다
