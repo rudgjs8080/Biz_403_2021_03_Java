@@ -31,4 +31,5 @@
 	나. base-package
 		3단계 package 명칭
 		ex) com.callor.score, com.naver.news, net.daum.blog
+		..
 
