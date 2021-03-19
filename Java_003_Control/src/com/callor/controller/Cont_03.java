@@ -46,6 +46,7 @@ public class Cont_03 {
 		for( int i = 0 ; i < 10 ; i ++) {
 			i--;
 			System.out.println("대한민국 만세");
+			break;
 		}
 		
 		
