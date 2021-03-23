@@ -25,8 +25,10 @@ public class Array_01 {
 			intSum += intKors[i];
 		}
 		for (int i = 0; i < 100; i++) {
-			System.out.printf("학생 %d : %d\n", i + 1, intKors[1]);
+			System.out.printf("학생 %d : %d\n", i + 1, intKors[i]);
+
 		}
+		System.out.println("총합계는 : " + intSum);
 	}
 
 }

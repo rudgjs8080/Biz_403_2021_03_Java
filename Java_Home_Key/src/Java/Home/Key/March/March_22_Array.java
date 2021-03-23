@@ -6,11 +6,11 @@ public class March_22_Array {
 
 	public static void main(String[] args) {
 
-		int[] intNum = new int[3];
-		// int형의 배열을 3개 만들수 있는 공간이 생겼다는 의미
-		intNum[0] = 5;
-		intNum[1] = 3;
-		intNum[2] = 2;
+//		int[] intNum = new int[3];
+//		// int형의 배열을 3개 만들수 있는 공간이 생겼다는 의미
+//		intNum[0] = 5;
+//		intNum[1] = 3;
+//		intNum[2] = 2;
 
 		Random rd = new Random(); // Random을 선언해준다.
 
@@ -21,6 +21,7 @@ public class March_22_Array {
 		for (int i = 0; i < 100; i++) {
 			intKors[i] = rd.nextInt(100) + 1;
 //			System.out.println(intKors); [I@53bd815b 라는 값이 출력된다 이유가 뭔지 모르겠다
+			// 학원에서는 정상적으로 출력된다 집에서 다시 해봐야할 것 같다
 		}
 		int intSum = 0;
 		int n = 100;
