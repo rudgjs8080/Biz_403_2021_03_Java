@@ -11,9 +11,9 @@ public class Pay_01 {
 
 		int money = 3723560;
 		int cash = 50000;
-		
+		int a = money / cash;
 		for(int i = 0 ; i < 1 ; i++) {
-			int a = money / cash;
+			
 			int b = money - (cash*a);
 			int c = cash / 5;
 			System.out.println(a);
