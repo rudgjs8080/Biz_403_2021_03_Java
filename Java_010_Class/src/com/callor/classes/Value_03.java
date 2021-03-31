@@ -20,7 +20,7 @@ public class Value_03 {
 		// method의 return type이 Integer형일 경우
 		// 아직 return할 값이 정해지지 않으면
 		// null 값을 return할 수 있다
-		return 100;
+		return null;
 	}
 	
 	
