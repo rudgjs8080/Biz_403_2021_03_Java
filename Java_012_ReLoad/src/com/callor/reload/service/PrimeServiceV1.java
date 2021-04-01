@@ -33,7 +33,7 @@ public class PrimeServiceV1 {
 	}
 
 	public void printNum() {
-		
+
 		System.out.println(prime);
 		System.out.println(num);
 		if (prime >= num) {

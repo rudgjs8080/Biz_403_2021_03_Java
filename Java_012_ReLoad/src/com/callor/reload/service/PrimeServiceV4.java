@@ -19,48 +19,29 @@ public class PrimeServiceV4 {
 
 	Random rd;
 	List<Integer> intList;
-	
+
 	public PrimeServiceV4() {
 		intList = new ArrayList<Integer>();
 		rd = new Random();
-		
+
 	}
-	
+
 	public void primeNum() {
 		int[] num = new int[50];
-		
-		for(int i = 0 ; i < 50 ; i++) {
-			num[i] = rd.nextInt(51) +50;
+
+		for (int i = 0; i < 50; i++) {
+			num[i] = rd.nextInt(51) + 50;
 		}
-		
-		for(int i = 0 ; i <50 ; i++) {
-			
-			for(int j = 2 ; j < num[i] ; j++) {
-				if(num[i] % j == 0) {
+
+		for (int i = 0; i < 50; i++) {
+
+			for (int j = 2; j < num[i]; j++) {
+				if (num[i] % j == 0) {
 					break;
 				}
 			}
 		}
-		
-		
-		
-		
-		
+
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }
