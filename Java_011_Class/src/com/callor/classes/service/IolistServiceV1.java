@@ -130,16 +130,27 @@ public class IolistServiceV1 {
 			System.out.println("QUIT. 업무종료");
 			System.out.println("---------------------------");
 			System.out.println("업무 선택 >> ");
-			// 놓침
+			String strMenu = scan.nextLine();
+			if(strMenu.equals("QUIT")) {
+				break;
+			}
 			
-			Integer selectJob = scan.nextInt();
+			Integer selectJob = null;
+			try {
+				selectJob = Integer.valueOf(strMenu);
+			} catch (Exception e) {
+				System.out.println("메뉴 선택 오류!");
+				System.out.println("메뉴는 1 ~ 2, " + "QUIT 만 입력가능");
+				// TODO: handle exception
+				continue;
+			}
+			
+			
 			if (selectJob == 1) {
 				this.input();
 			} else if (selectJob == 2) {
 				this.printAllList();
-			} else if (selectJob == 0) {
-				break;
-			}
+			} 
 
 		} // end while
 		System.out.println("업무가 종료되었습니다");
