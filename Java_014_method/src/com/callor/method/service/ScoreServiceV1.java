@@ -15,10 +15,10 @@ public class ScoreServiceV1 {
 
 	}
 
-	public void inputScore(String strClass) {
+	public void inputScore() {
 
-		Integer retNum = inV1A.inputValue(strClass, 0, 100);
-
+		Integer retNum = inV1A.inputValue("국어", 0, 100);
+		
 		if (retNum == null) {
 
 			System.out.println("종료");

@@ -8,7 +8,7 @@ public class Score_01 {
 	
 		ScoreServiceV1 ssV1 = new ScoreServiceV1();
 		
-		ssV1.inputScore("영어");
+		ssV1.inputScore();
 		
 		
 		

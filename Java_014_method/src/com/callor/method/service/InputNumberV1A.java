@@ -50,7 +50,7 @@ public class InputNumberV1A {
 					System.out.println();
 					continue;
 				}
-				return null;
+				return retNum;
 			}
 
 		}
@@ -65,6 +65,7 @@ public class InputNumberV1A {
 	public Integer inputValue(String title) {
 
 		while (true) {
+			Integer intNum = 0;
 			System.out.println(title + " 값을 입력하세요(QUIT : 입력중단)");
 			System.out.println(" >> ");
 			String strNum = scan.nextLine();
@@ -72,7 +73,7 @@ public class InputNumberV1A {
 			if (strNum.trim().equals("QUIT")) {
 				return null;
 			} else {
-				Integer intNum = null;
+				
 				try {
 					intNum = Integer.valueOf(strNum);
 				} catch (NumberFormatException e) {
