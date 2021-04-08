@@ -78,14 +78,16 @@ public class InputServiceImplV1 implements InputService {
 	public Integer inputValue(String title, int start, int end) {
 		// TODO 제목, 시작값, 종료값으로 유효성 검사 method
 
-		title = String.format("$(%d ~ %d 범위의)", 0, 100);
+		title = String.format("%s(%d ~ %d 범위의)", title,0, 100);
 		while (true) {
 			Integer intNum = this.inputValue(title);
 			if (intNum != null) {
 				if (intNum < start || intNum > end) {
 					System.out.printf("값은 %d ~ %d 까지 입력하세요\n", start, end);
+					continue;
 				}
 			}
+			return intNum;
 		} // end while
 
 	}

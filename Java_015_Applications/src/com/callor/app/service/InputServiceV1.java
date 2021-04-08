@@ -57,6 +57,7 @@ public class InputServiceV1 {
 					continue;
 				}
 			}
+			return intNum;
 		}
 
 	}
