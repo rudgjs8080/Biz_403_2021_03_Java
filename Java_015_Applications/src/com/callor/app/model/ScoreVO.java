@@ -44,18 +44,18 @@ public class ScoreVO {
 		this.math = math;
 	}
 	public Integer getTotal() {
-		Integer sum = this.kor;
-		sum += this.eng;
-		sum += this.math;
-		return sum;
+		Integer total = this.kor;
+		total += this.eng;
+		total += this.math;
+		return total;
 	}
 	
 	public float getAvg() {
-		Integer sum = this.kor;
-		sum += this.eng;
-		sum += this.math;
+		Integer total = this.kor;
+		total += this.eng;
+		total += this.math;
 		
-		float avg = (float)sum/3;
+		float avg = (float)total/3;
 		return avg;
 	}
 	
