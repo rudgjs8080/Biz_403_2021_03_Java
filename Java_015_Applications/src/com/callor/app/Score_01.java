@@ -1,7 +1,7 @@
 package com.callor.app;
 
 import com.callor.app.service.ScoreService;
-import com.callor.app.service.ScoreServiceImplV1;
+import com.callor.app.service.impl.ScoreServiceImplV1;
 
 public class Score_01 {
 

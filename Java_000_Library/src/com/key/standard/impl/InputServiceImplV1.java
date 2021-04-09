@@ -59,7 +59,7 @@ public class InputServiceImplV1 implements InputService {
 	public Integer inputValue(String title, int start) {
 		// TODO 시작값을 갖는 유효성 검사 추가한 method
 
-		title = String.format("%s ( %d 이상)", start);
+		title = String.format("%s ( %d 이상)",title, start);
 
 		while (true) {
 			Integer intNum = this.inputValue(title);

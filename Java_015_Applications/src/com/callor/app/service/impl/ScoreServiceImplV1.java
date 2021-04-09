@@ -1,4 +1,4 @@
-package com.callor.app.service;
+package com.callor.app.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.callor.app.model.ScoreVO;
+import com.callor.app.service.ScoreService;
 
 public class ScoreServiceImplV1 implements ScoreService {
 
@@ -80,13 +81,13 @@ public class ScoreServiceImplV1 implements ScoreService {
 				return null; // 이 부분이 return 인지 break 인지 헷갈림
 				// null 이 return 되면 어떻게 되는건지 모르겠음
 				// while 문에서 return을 만나면 끝남
-			} else {
-
-				this.inputScore();
+			} 
+			else {
 				vo.setName(name);
+				this.inputScore();
 			}
-
 			return name;
+				
 
 		}
 
@@ -99,6 +100,8 @@ public class ScoreServiceImplV1 implements ScoreService {
 		Integer kor = null;
 		Integer eng = null;
 		Integer math = null;
+		
+		
 		
 		while (true) {
 
@@ -132,6 +135,19 @@ public class ScoreServiceImplV1 implements ScoreService {
 			}
 			break;
 		}
+
+		
+		vo.setKor(kor);
+		vo.setEng(eng);
+		vo.setMath(math);
+
+		scoreList.add(vo);
+		
+		
+		
+		
+	}
+	
 //
 //		Integer math = null;
 //		while (true) {
@@ -151,14 +167,10 @@ public class ScoreServiceImplV1 implements ScoreService {
 //
 //			break;
 //		}
-
-		vo.setKor(kor);
-		vo.setEng(eng);
-		vo.setMath(math);
-
-		scoreList.add(vo);
+	
 		
-	}
+		
+	
 
 	public void printScore() {
 		// TODO printScore
