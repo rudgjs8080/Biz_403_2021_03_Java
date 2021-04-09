@@ -1,10 +1,11 @@
-package com.callor.app.service;
+package com.callor.app.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 import com.callor.app.model.ScoreVO;
+import com.callor.app.service.ScoreService;
 import com.key.standard.InputService;
 import com.key.standard.impl.InputServiceImplV1;
 
@@ -20,7 +21,7 @@ import com.key.standard.impl.InputServiceImplV1;
  * 			- 이름입력
  * 			- 점수입력
  * 	
- * 		나. 학생의 이름을 입력하는 inptuName() method는
+ * 		나. 학생의 이름을 입력하는 inputName() method는
  * 			return type String 형이기 때문에
  * 			학생이름을 입력받고 입력받은 학생이름을 
  * 				return 한다
@@ -81,7 +82,11 @@ public class ScoreServiceImplV1A implements ScoreService{
 		this.inputName("무명");
 		return null;
 	}
-
+/*
+ * 현재 클래스내부에서만 호출되는 method private으로 선언한다
+ * 현재 클래스를 상속받아 확장하여 사용할 수 있도록 하려면
+ * private => protected로 변경해줘야한다
+ */
 	protected String inputNum() {
 		
 		// 학번입력처리 : 001, 002 형식으로 입력받자

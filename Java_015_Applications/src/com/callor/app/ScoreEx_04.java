@@ -1,8 +1,8 @@
 package com.callor.app;
 
 import com.callor.app.service.ScoreService;
+import com.callor.app.service.ScoreServiceV2;
 import com.callor.app.service.impl.ScoreServiceImplV2;
-import com.callor.app.service.impl.ScoreServiceV2;
 
 public class ScoreEx_04 {
 

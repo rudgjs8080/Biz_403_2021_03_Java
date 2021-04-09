@@ -1,7 +1,6 @@
 package com.callor.app.service.impl;
 
 import com.callor.app.model.ScoreVO;
-import com.callor.app.service.ScoreServiceImplV1A;
 
 /*
  * 1. ScoreServiceImplV1을 상속받고
