@@ -1,26 +1,8 @@
-package com.key.standard.impl;
+package com.rudgjs.standard.impl;
 
 import java.util.Scanner;
 
-/*
- * 규칙을 지키지 않으면 코드를 작성하지 못하게 만듦
- * 
- */
-import com.key.standard.InputService;
-/*
- * 인터페이스를 implements 한 클래스는 
- * 이름을 지을때 접미사에 보통 Impl을 붙인다
- * 
- * 인터페이스를 impl 한 클래스는
- * 인터페이스에 설계된 추상메서드를 "반드시" 구체적인
- * 코드로 구현해야 한다
- * 
- * 만약 아직 구체적인 코드가 구현되지 않았더라도
- * method의 형태는 삭제 할 수 없다
- * 
- * 이러한 규칙을 적용하여 다른 클래스와 연동할 때
- * 편리하고, 오류가 없도록 하기 위함이다
- */
+import com.rudgjs.standard.InputService;
 
 public class InputServiceImplV1 implements InputService {
 

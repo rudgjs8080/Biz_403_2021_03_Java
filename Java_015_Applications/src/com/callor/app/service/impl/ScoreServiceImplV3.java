@@ -7,7 +7,7 @@ package com.callor.app.service.impl;
  * 즉 V3는 V1A에 구현된 객체, 변수, method를 모두 그대로 물려받으면서
  * V2A에서 새롭게 작성한 inputNum()를 상속받아서 사용하고 있다
  */
-public class ScoreServiceImpleV3 extends ScoreServiceImplV2A{
+public class ScoreServiceImplV3 extends ScoreServiceImplV2A{
 
 	@Override
 	public void selectMenu() {

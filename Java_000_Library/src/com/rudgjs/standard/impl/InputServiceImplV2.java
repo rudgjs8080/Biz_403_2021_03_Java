@@ -1,6 +1,6 @@
-package com.key.standard.impl;
+package com.rudgjs.standard.impl;
 
-import com.key.standard.InputService;
+import com.rudgjs.standard.InputService;
 
 public class InputServiceImplV2 implements InputService{
 

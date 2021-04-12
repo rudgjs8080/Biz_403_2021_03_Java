@@ -1,4 +1,4 @@
-package com.key.standard;
+package com.rudgjs.standard;
 /*
  * interface
  * java 언어를 사용하는 프로젝트를 구현할 때

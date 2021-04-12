@@ -1,11 +1,12 @@
-package com.key.standard;
+package com.rudgjs.standard.exec;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Vector;
 
-import com.key.standard.impl.InputServiceImplV1;
+import com.rudgjs.standard.InputService;
+import com.rudgjs.standard.impl.InputServiceImplV1;
 
 public class Ex_01 {
 
