@@ -1,7 +1,7 @@
 package com.callor.app.service;
 
-import com.key.standard.InputService;
-import com.key.standard.impl.InputServiceImplV1;
+import com.rudgjs.standard.InputService;
+import com.rudgjs.standard.impl.InputServiceImplV1;
 
 /*
  * 1. InputService interface를 활용하여

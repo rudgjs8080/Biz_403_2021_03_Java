@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.callor.app.model.ScoreVO;
-import com.key.standard.InputService;
-import com.key.standard.impl.InputServiceImplV1;
+import com.rudgjs.standard.InputService;
+import com.rudgjs.standard.impl.InputServiceImplV1;
 
 public class ScoreEx_02 {
 

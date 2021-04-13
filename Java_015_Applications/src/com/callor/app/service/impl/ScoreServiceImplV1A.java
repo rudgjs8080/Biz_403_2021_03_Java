@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 import com.callor.app.model.ScoreVO;
 import com.callor.app.service.ScoreService;
-import com.key.standard.InputService;
-import com.key.standard.impl.InputServiceImplV1;
+import com.rudgjs.standard.InputService;
+import com.rudgjs.standard.impl.InputServiceImplV1;
 
 /*
  * 1. 메뉴를 보여주고
