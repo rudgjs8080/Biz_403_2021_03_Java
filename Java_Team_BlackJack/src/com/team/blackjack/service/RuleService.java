@@ -70,6 +70,11 @@ public class RuleService {
 				this.winLoss();
 				return;
 			}
+			// 1, 2 가 아닌 다른 수를 입력했을 때 경고문 추가 
+			/*else {
+				System.out.println("1 또는 2를 입력해주세요");
+				continue;}
+				*/
 		}
 	}
 	
