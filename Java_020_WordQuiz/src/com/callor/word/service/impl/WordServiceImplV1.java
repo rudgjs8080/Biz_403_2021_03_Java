@@ -11,11 +11,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 import com.callor.word.domain.WordVO;
+import com.callor.word.service.WordService;
 import com.rudgjs.standard.InputService;
 import com.rudgjs.standard.MenuService;
 import com.rudgjs.standard.impl.InputServiceImplV1;
 
-public class WordServiceImplV1 {
+public class WordServiceImplV1 implements WordService{
 
 	protected InputService inService;
 	protected MenuService mService;
@@ -25,7 +26,7 @@ public class WordServiceImplV1 {
 	protected Random rd;
 	protected final int 영어 = 0;
 	protected final int 한글 = 1;
-
+	protected WordVO gameWord;
 	// word.txt 파일을 기본으로 하여 객체생성을 하기 위한 생성자
 	public WordServiceImplV1() {
 		this("src/com/callor/word/word.txt");
@@ -119,7 +120,7 @@ public class WordServiceImplV1 {
 	 * 알파벳단위로 자르고 
 	 * 뒤섞어 배열로 만든 후 return
 	 */
-		private void inputWord(String[] viewWord) {
+		protected String inputWord(String[] viewWord) {
 		
 		System.out.println("=".repeat(50));
 		System.out.println("뤼팡의 영단어 게임");
@@ -128,10 +129,12 @@ public class WordServiceImplV1 {
 		// shuffle된 영단어 보여주기 
 		//this.startGame();
 		System.out.println(Arrays.toString(viewWord));
+		System.out.println("-".repeat(50));
 		System.out.print(">> 입력 : ");
 		String strInput = scan.nextLine();
+		return strInput;
 	}
-	private String[] shuffleWord(String strEnglish) {
+	protected String[] shuffleWord(String strEnglish) {
 		// TODO 셔플만 해서 return
 		// 몇번 섞을 것인지(100번)
 		// shuffle code
@@ -152,7 +155,7 @@ public class WordServiceImplV1 {
 		return shuffleEnglish;
 	}
 
-	private void loadWords(String wordFile) {
+	protected void loadWords(String wordFile) {
 		// TODO word.txt 파일을 읽어 wordList 만들어 두기
 		FileReader fileReader = null;
 		BufferedReader buffer = null;
