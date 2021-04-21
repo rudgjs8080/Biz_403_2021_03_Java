@@ -25,12 +25,31 @@ import lombok.ToString;
 @Setter
 @ToString
 
+
 public class WordVO {
 
 	// 정보의 은닉(정보를 private로 선언한 것 자체가 정보의 은닉)
 	private String english;
 	private String korea;
 	private Integer count;
+	public String getEnglish() {
+		return english;
+	}
+	public void setEnglish(String english) {
+		this.english = english;
+	}
+	public String getKorea() {
+		return korea;
+	}
+	public void setKorea(String korea) {
+		this.korea = korea;
+	}
+	public Integer getCount() {
+		return count;
+	}
+	public void setCount(Integer count) {
+		this.count = count;
+	}
 	
 	
 	
