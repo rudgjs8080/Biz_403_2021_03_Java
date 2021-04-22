@@ -8,5 +8,6 @@ public class GameEx_01 {
 	public static void main(String[] args) {
 			
 		GameInterface game = new GameImplV1();
+		game.selectMenu();
 	}
 }

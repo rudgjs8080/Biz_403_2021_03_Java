@@ -7,7 +7,7 @@ public interface GameInterface {
 	public void run();
 	public void selectMenu();
 	public void cardDraw(User name, int count);
-	public void goStay();
-	public void rule();
+	public Integer goStay();
+	public Integer rule();
 	public void printResult();
 }
