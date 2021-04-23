@@ -49,15 +49,14 @@ public class GameImplV1 implements GameInterface {
 	public void gameStart() {
 		
 		this.run(); // 카드덱 생성
-		this.batting();
+		this.batting();// 배팅
 		this.cardDraw(player, 2); // 플레이어 2장 뽑기
 		this.cardDraw(dealer, 2); // 딜러 2장 뽑기
 		while (true) {
 			if (this.goStay() == 1) {
-				if (this.unOver() == true) {
+				if (this.unOver() == null) {//null > true
 					continue;
-				} else
-					return;
+				} else break;// return에서 break로 변경
 			}
 			break;
 		}
@@ -82,6 +81,9 @@ public class GameImplV1 implements GameInterface {
 			} else if (strInput.equals("1")) {
 				this.gameStart();
 				continue;
+			} else {
+				System.out.println("잘못입력하셨습니다 다시 입력해주세요");//
+				continue;
 			}
 		}
 
@@ -98,7 +100,6 @@ public class GameImplV1 implements GameInterface {
 
 	public Integer goStay() {
 		// TODO 처음에 2장씩 카드 배분 후 user turn에 맞게 this.goStay 사용
-		Scanner scan = new Scanner(System.in);
 		System.out.println("[Player] : " + player.viewCard());
 		System.out.println("카드를 한장더 받으시려면 1번, 그만 받으시려면 2번을 입력하세요.");
 		while (true) {
@@ -117,18 +118,16 @@ public class GameImplV1 implements GameInterface {
 		}
 	}
 
-	public boolean unOver() {
+	public Integer unOver() {
 		// TODO Auto-generated method stub
-		boolean flag = true;
+		
 		Integer unOver = player.getScore();
 		if (unOver > 21) {
 			System.out.println("카드 점수가 21점을 초과했습니다.");
-			System.out.println("Player Lose...");
-			flag = false;
-			return flag;
+			//System.out.println("Player Lose...");
+			return 패배;
 		}
-		return flag;
-
+		return null;
 	}
 
 	public void batting() {
@@ -163,39 +162,38 @@ public class GameImplV1 implements GameInterface {
 		System.out.println("남은 소지금 : " + vo.getMoney());// 남은 소지금
 		}
 
-	@Override
-	public Integer rule() {
-		// TODO 점수 계산
-		int playerScore = 0; // 플레이어 총점
-		int dealerScore = 0; // 딜러 총점
+	public Integer rule() { // 오종관
+	      // TODO 점수 계산
+	      int playerScore = 0; // 플레이어 총점
+	      int dealerScore = 0; // 딜러 총점
 
-		playerScore = player.getScore();
+	      playerScore = player.getScore();
 
-		dealerScore = dealer.getScore();
-		while (true) {
-			if (playerScore < 17) {
-				System.out.println("카드의 총점은 17이상이어야 합니다.");
-				System.out.println("카드를 한장 더 뽑습니다.");
-				this.cardDraw(player, 1);
-			}
-			break;
-		}
+	      dealerScore = dealer.getScore();
+	      
+	      while(true) {
+	         if (dealerScore < 17) {
+	            this.cardDraw(dealer, 1);
+	         }else break;
+	      }
+	         System.out.println("딜러의 카드");
+	         System.out.println(dealer.viewCard());
+	         
+	      if (dealerScore > 21) {
+	         System.out.println("딜러가 21점이 넘었습니다.");
+	         return 승리;
+	      }
+	      
+	      
+	      if ( dealerScore > playerScore) {
+	         return 패배; 
+	      } else if( dealerScore == playerScore) {
+	         return 무승부;
+	      } else {
+	         return 승리;
+	      }
 
-		if (dealerScore < 17) {
-			this.cardDraw(dealer, 1);
-		}
-
-		if (playerScore > dealerScore) {
-			return 승리;
-		} else if (playerScore == dealerScore) {
-			return 무승부;
-		} else if (playerScore < dealerScore) {
-			return 패배;
-		}
-
-		return null;
-
-	}
+	   }
 
 	@Override
 	public void printResult() {

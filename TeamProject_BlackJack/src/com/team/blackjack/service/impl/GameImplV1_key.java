@@ -74,7 +74,7 @@ public class GameImplV1_key implements GameInterface {
 	}
 
 	@Override
-	public void goStay() {
+	public Integer goStay() {
 		// TODO
 		while (true) {
 			if (player.getScore() < 22) {
@@ -87,7 +87,7 @@ public class GameImplV1_key implements GameInterface {
 					this.cardDraw(player, 1);
 					continue;
 				} else if (strPlus.equalsIgnoreCase("No")) {
-					return;
+					return null;
 				} else
 					System.out.println("잘못입력하셨습니다 다시 입력해주세요");
 				continue;
@@ -103,7 +103,7 @@ public class GameImplV1_key implements GameInterface {
 	}
 
 	@Override
-	public void rule() {
+	public Integer rule() {
 		// TODO
 		while (true) {
 			if (dealer.getScore() < 17) {
@@ -115,7 +115,7 @@ public class GameImplV1_key implements GameInterface {
 				System.out.println("Player의 승리입니다");
 				this.gameStart();
 			} else
-				return;
+				return null;
 		}
 	}
 
