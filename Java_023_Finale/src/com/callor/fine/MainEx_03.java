@@ -13,13 +13,12 @@ public class MainEx_03 {
 		// 빨간줄 해결 하기 
 	}
 	
-	
-	public Integer AddInt(int num1, int num2) {
-		num1 = 10;
-		num2 = 20;
-		int sum = num1 + num2;
+	/*
+	public class AddInt{
 		
-		return sum;
+		public Integer add(int num1, int num2) {
+			return num1 + num2;
+		}
 	}
-	//?
+	*/
 }

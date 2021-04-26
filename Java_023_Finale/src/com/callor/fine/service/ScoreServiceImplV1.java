@@ -10,8 +10,8 @@ public class ScoreServiceImplV1 implements ScoreService{
 	
 	
 	
-	private List<ScoreVO> scoreList;
-	private Scanner scan;
+	protected List<ScoreVO> scoreList;
+	protected Scanner scan;
 	public ScoreServiceImplV1() {
 
 		scoreList = new ArrayList<ScoreVO>();

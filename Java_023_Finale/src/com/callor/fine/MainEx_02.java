@@ -8,6 +8,11 @@ public class MainEx_02 {
 		
 		ScoreVO scoreVO[] = new ScoreVO[10];
 		
+		for(int i = 0 ; i < 10 ; i++) {
+			scoreVO[i] = new ScoreVO();
+		} // 추가문장
+		// 배열을 생성해줘야함
+		
 		int index = 3;
 		scoreVO[index].setNum("0001");
 		scoreVO[index].setKor(90);
